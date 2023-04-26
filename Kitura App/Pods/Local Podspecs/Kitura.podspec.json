@@ -1,0 +1,39 @@
+{
+  "name": "Kitura",
+  "version": "3.0.1",
+  "summary": "A Swift web framework and HTTP server.",
+  "homepage": "https://www.kitura.dev",
+  "license": {
+    "type": "Apache License, Version 2.0"
+  },
+  "authors": "IBM",
+  "platforms": {
+    "osx": "10.11",
+    "ios": "10.0",
+    "tvos": "10.0"
+  },
+  "source": {
+    "git": "https://github.com/Kitura/Kitura.git",
+    "tag": "3.0.1"
+  },
+  "source_files": "Sources/Kitura/**/*.swift",
+  "swift_versions": "5.2",
+  "dependencies": {
+    "KituraContracts": [
+      "~> 2.0"
+    ],
+    "KituraLoggerAPI": [
+      "~> 2.0"
+    ],
+    "KituraNIO": [
+      "~> 3.0"
+    ],
+    "KituraTemplateEngine": [
+      "~> 3.0"
+    ],
+    "KituraTypeDecoder": [
+      "~> 2.0"
+    ]
+  },
+  "swift_version": "5.2"
+}

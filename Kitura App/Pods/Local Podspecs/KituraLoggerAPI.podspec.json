@@ -1,0 +1,29 @@
+{
+  "name": "KituraLoggerAPI",
+  "version": "2.0.0",
+  "summary": "Kitura logger protocol.",
+  "homepage": "https://www.kitura.dev",
+  "license": {
+    "type": "Apache License, Version 2.0"
+  },
+  "authors": "IBM",
+  "module_name": "LoggerAPI",
+  "platforms": {
+    "osx": "10.11",
+    "ios": "10.0",
+    "tvos": "9.1",
+    "watchos": "2.0"
+  },
+  "source": {
+    "git": "https://github.com/Kitura/LoggerAPI.git",
+    "tag": "2.0.0"
+  },
+  "source_files": "Sources/LoggerAPI/**/*.swift",
+  "swift_versions": "5.1",
+  "dependencies": {
+    "Logging": [
+      "~> 1.0"
+    ]
+  },
+  "swift_version": "5.1"
+}

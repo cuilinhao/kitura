@@ -1,0 +1,6 @@
+framework module TypeDecoder {
+  umbrella header "KituraTypeDecoder-umbrella.h"
+
+  export *
+  module * { export * }
+}

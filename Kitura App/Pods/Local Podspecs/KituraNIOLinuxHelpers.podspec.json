@@ -1,0 +1,23 @@
+{
+  "name": "KituraNIOLinuxHelpers",
+  "version": "3.1.0",
+  "summary": "A networking library for Kitura, based on SwiftNIO.",
+  "homepage": "https://www.kitura.dev",
+  "license": {
+    "type": "Apache License, Version 2.0"
+  },
+  "authors": "IBM",
+  "module_name": "CLinuxHelpers",
+  "platforms": {
+    "osx": "10.11",
+    "ios": "10.0",
+    "tvos": "10.0"
+  },
+  "source": {
+    "git": "https://github.com/Kitura/Kitura-NIO.git",
+    "tag": "3.1.0"
+  },
+  "source_files": "Sources/CLinuxHelpers/**/*.{h,c}",
+  "swift_versions": "5.2",
+  "swift_version": "5.2"
+}

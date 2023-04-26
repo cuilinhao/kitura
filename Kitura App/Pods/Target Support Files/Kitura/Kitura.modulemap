@@ -1,0 +1,6 @@
+framework module Kitura {
+  umbrella header "Kitura-umbrella.h"
+
+  export *
+  module * { export * }
+}

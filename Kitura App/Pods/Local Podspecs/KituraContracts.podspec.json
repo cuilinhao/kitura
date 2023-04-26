@@ -1,0 +1,28 @@
+{
+  "name": "KituraContracts",
+  "version": "2.0.1",
+  "summary": "A library containing type definitions shared by client and server Kitura code.",
+  "homepage": "https://www.kitura.dev",
+  "license": {
+    "type": "Apache License, Version 2.0"
+  },
+  "authors": "IBM",
+  "platforms": {
+    "osx": "10.11",
+    "ios": "10.0",
+    "tvos": "9.1",
+    "watchos": "2.0"
+  },
+  "source": {
+    "git": "https://github.com/Kitura/KituraContracts.git",
+    "tag": "2.0.1"
+  },
+  "source_files": "Sources/KituraContracts/**/*.swift",
+  "swift_versions": "5.0",
+  "dependencies": {
+    "LoggerAPI": [
+      "~> 2.0"
+    ]
+  },
+  "swift_version": "5.0"
+}

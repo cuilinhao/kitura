@@ -1,0 +1,55 @@
+{
+  "name": "KituraNIO",
+  "version": "3.1.0",
+  "summary": "A networking library for Kitura, based on SwiftNIO.",
+  "homepage": "https://www.kitura.dev",
+  "license": {
+    "type": "Apache License, Version 2.0"
+  },
+  "authors": "IBM",
+  "module_name": "KituraNet",
+  "platforms": {
+    "osx": "10.11",
+    "ios": "10.0",
+    "tvos": "10.0"
+  },
+  "source": {
+    "git": "https://github.com/Kitura/Kitura-NIO.git",
+    "tag": "3.1.0"
+  },
+  "source_files": "Sources/KituraNet/**/*.swift",
+  "swift_versions": "5.2",
+  "dependencies": {
+    "KituraNIOLinuxHelpers": [
+      "3.1.0"
+    ],
+    "SwiftNIO": [
+      "~> 2.33"
+    ],
+    "SwiftNIOFoundationCompat": [
+      "~> 2.33"
+    ],
+    "SwiftNIOHTTP1": [
+      "~> 2.33"
+    ],
+    "SwiftNIOWebSocket": [
+      "~> 2.33"
+    ],
+    "SwiftNIOConcurrencyHelpers": [
+      "~> 2.33"
+    ],
+    "SwiftNIOSSL": [
+      "~> 2.0"
+    ],
+    "SwiftNIOExtras": [
+      "~> 1.0"
+    ],
+    "BlueSSLService": [
+      "~> 2.0"
+    ],
+    "KituraLoggerAPI": [
+      "~> 2.0"
+    ]
+  },
+  "swift_version": "5.2"
+}
