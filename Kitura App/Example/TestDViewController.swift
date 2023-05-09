@@ -86,7 +86,6 @@ extension TestDViewController {
         try! app.server.start(address: .hostname("0.0.0.0", port: 8080))
     }
     
-    
     func test3() {
         let app = Application(.testing)
         app.routes.defaultMaxBodySize = ByteCount(value: Int.max)
@@ -134,8 +133,113 @@ extension TestDViewController {
             let size = Double(req.headers["Content-Length"].first!)!
             print(size)
             
-            let url = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(UUID().uuidString, isDirectory: false)
+            //let url = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(UUID().uuidString, isDirectory: false)
+            let fileManager = FileManager.default
+            var url = try fileManager.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent("MP4s", isDirectory: true)
+            ///创建文件
+            try fileManager.createDirectory(at: url, withIntermediateDirectories: true)
+            
+            ///创建文件名
+            url.appendPathComponent("received_file.mp4", isDirectory: false)
+            //url.appendPathComponent("received_file.ts", isDirectory: false)
+            debugPrint("@@_ add file tp: \(url)")
+            try? fileManager.removeItem(at: url)
+            fileManager.createFile(atPath: url.path, contents: nil)
+            
+            let fileHandle = try FileHandle(forWritingTo: url)
                                                                                    
+            print("__>>>\(url.path)")
+            //let handle = OutputStream(url: url, append: false)!
+            
+            var total: Double = 0
+            req.body.drain { result in
+                let promise = req.eventLoop.makePromise(of: Void.self)
+                //768163530
+                switch result {
+                case .buffer(let buffer):
+                    total += Double(Data(buffer: buffer).count)
+                    //Data(buffer: buffer)
+                    let ff = Data(buffer: buffer)
+                    //这个会crash
+                    //func write<T>(contentsOf data: T) throws where T : DataProtocol
+                    //这个api最多支持iOS13.4 故不可用
+                    // fileHandle.write(ff) 这个方法会给OC抛出一个异常，swift捕获不到，就会crash
+                    fileHandle.write(ff)
+                    print("\(total / size * 100)")
+                    promise.succeed(())
+                case .error(let error):
+                    done.fail(error)
+                    
+                case .end:
+                    //handle.close()
+                   try? fileHandle.close()
+                    promise.succeed(())
+                    done.succeed(Response(status: .created))
+                }
+                
+                // manually return pre-completed future
+                // this should balloon in memory
+                // return req.eventLoop.makeSucceededFuture(())
+                
+                // return real future that indicates bytes were handled
+                // this should use very little memory
+                return promise.futureResult
+            }
+            return done.futureResult
+        }
+        
+        //0.0.0.0是监听ipv4 的任意端口
+        try! app.server.start(address: .hostname("0.0.0.0", port: 8080))
+    }
+    
+    func test33() {
+        let app = Application(.testing)
+        app.routes.defaultMaxBodySize = ByteCount(value: Int.max)
+        /*
+         app.on(.PUT, "upload", body: .stream) { request in
+         //req.fileio
+         print("___>>>_ 上传 文件回调")
+         /*
+          let data = ByteBuffer(string: "ByteBuffer")
+          try! req.fileio.writeFile(data, at: "/path/to/file.txt")
+          */
+         let size = Int(request.headers["Content-Length"].first!)!
+         print(size)
+         
+         var partial = 0
+         request.body.drain {
+         print("___>>>_ 上传 数据回调")
+         switch $0 {
+         case let .buffer(buffer):
+         //---
+         print(buffer.readableBytes)
+         partial += Data(buffer: buffer).count
+         print(partial, partial == size)
+         case let .error(error):
+         print(error)
+         case .end:
+         print(size == partial)
+         
+         }
+         
+         return request.eventLoop.makeSucceededVoidFuture()
+         }
+         
+         print(size == partial)
+         
+         //req.fileio.writeFile(data, at: "").foldWithEventLoop(req.eventLoop) { _, o, e in
+         //  print("___>>>_\(o)___\(e)")
+         //}
+         return Response(status: .created)
+         }
+         */
+        app.on(.PUT, "upload", body: .stream) { req in
+            let done = req.eventLoop.makePromise(of: Response.self)
+            
+            let size = Double(req.headers["Content-Length"].first!)!
+            print(size)
+            
+            let url = try FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true).appendingPathComponent(UUID().uuidString, isDirectory: false)
             print("__>>>\(url.path)")
             let handle = OutputStream(url: url, append: false)!
             
