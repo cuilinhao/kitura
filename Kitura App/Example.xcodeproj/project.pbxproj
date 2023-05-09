@@ -11,6 +11,8 @@
 		2F1210A3295F2FAB00A5C628 /* Certificates.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 2F1210A2295F2FA800A5C628 /* Certificates.p12 */; };
 		630964292A08D05E00B42122 /* TestF_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630964282A08D05E00B42122 /* TestF_VC.swift */; };
 		6309642B2A08E05400B42122 /* TestDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6309642A2A08E05400B42122 /* TestDViewController.swift */; };
+		63270E502A0A735D00BBCB8A /* PrivateKey.pem in Resources */ = {isa = PBXBuildFile; fileRef = 63270E4E2A0A735D00BBCB8A /* PrivateKey.pem */; };
+		63270E512A0A735D00BBCB8A /* Certificate.pem in Resources */ = {isa = PBXBuildFile; fileRef = 63270E4F2A0A735D00BBCB8A /* Certificate.pem */; };
 		63BA56F529F92B5F00F1FBBA /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA56F429F92B5F00F1FBBA /* TestViewController.swift */; };
 		63BA56FB29F949C500F1FBBA /* TestBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA56FA29F949C500F1FBBA /* TestBViewController.swift */; };
 		63BA56FD29FA605800F1FBBA /* TestCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA56FC29FA605800F1FBBA /* TestCViewController.swift */; };
@@ -40,6 +42,8 @@
 		2FBB92D1293A0B6900F5C757 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		630964282A08D05E00B42122 /* TestF_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestF_VC.swift; sourceTree = "<group>"; };
 		6309642A2A08E05400B42122 /* TestDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDViewController.swift; sourceTree = "<group>"; };
+		63270E4E2A0A735D00BBCB8A /* PrivateKey.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PrivateKey.pem; sourceTree = "<group>"; };
+		63270E4F2A0A735D00BBCB8A /* Certificate.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Certificate.pem; sourceTree = "<group>"; };
 		63BA56F429F92B5F00F1FBBA /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		63BA56FA29F949C500F1FBBA /* TestBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBViewController.swift; sourceTree = "<group>"; };
 		63BA56FC29FA605800F1FBBA /* TestCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +90,8 @@
 		E8336DA92925465E00AC3563 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				63270E4F2A0A735D00BBCB8A /* Certificate.pem */,
+				63270E4E2A0A735D00BBCB8A /* PrivateKey.pem */,
 				2F1210A2295F2FA800A5C628 /* Certificates.p12 */,
 				E8366D1C28C0B08D00C05A21 /* Assets.xcassets */,
 				E8366D1E28C0B08D00C05A21 /* LaunchScreen.storyboard */,
@@ -198,8 +204,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63270E512A0A735D00BBCB8A /* Certificate.pem in Resources */,
 				E8366D2028C0B08D00C05A21 /* LaunchScreen.storyboard in Resources */,
 				2F1210A3295F2FAB00A5C628 /* Certificates.p12 in Resources */,
+				63270E502A0A735D00BBCB8A /* PrivateKey.pem in Resources */,
 				E8366D1D28C0B08D00C05A21 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
