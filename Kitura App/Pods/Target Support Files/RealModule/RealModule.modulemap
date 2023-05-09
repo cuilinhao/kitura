@@ -1,0 +1,6 @@
+framework module RealModule {
+  umbrella header "RealModule-umbrella.h"
+
+  export *
+  module * { export * }
+}

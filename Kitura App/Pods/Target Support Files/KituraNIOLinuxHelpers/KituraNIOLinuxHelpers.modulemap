@@ -1,6 +1,0 @@
-framework module CLinuxHelpers {
-  umbrella header "KituraNIOLinuxHelpers-umbrella.h"
-
-  export *
-  module * { export * }
-}

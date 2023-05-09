@@ -15,6 +15,8 @@
 import Darwin.C
 #elseif os(Linux) || os(FreeBSD) || os(Android)
 import Glibc
+#elseif os(Windows)
+import ucrt
 #endif
 
 @usableFromInline
@@ -261,3 +263,6 @@ extension Heap: Sequence {
         return self.storage.count
     }
 }
+
+extension Heap: Sendable where Element: Sendable {}
+extension HeapIterator: Sendable where Element: Sendable {}

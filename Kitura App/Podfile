@@ -1,4 +1,7 @@
-source "git@git.nevint.com:ios_dd/niopodrepo.git"
+#https://github.com/VaslD/Podspecs.git
+#https://github.com/cuilinhao/vapor_podspec
+source "https://github.com/cuilinhao/vapor_podspec.git"
+#source "git@git.nevint.com:ios_dd/niopodrepo.git"
 source "https://cdn.cocoapods.org/"
 
 platform :ios, "13.0"
@@ -6,18 +9,25 @@ platform :ios, "13.0"
 use_frameworks!
 
 target "Example" do
-  pod "Kitura", :podspec => "./Kitura/Kitura.podspec"
-  pod "KituraContracts", :podspec => "./Kitura/KituraContracts.podspec"
-  pod "KituraLoggerAPI", :podspec => "./Kitura/KituraLoggerAPI.podspec"
-  pod "KituraNIO", :podspec => "./Kitura/KituraNIO.podspec"
-  pod "KituraNIOLinuxHelpers", :podspec => "./Kitura/KituraNIOLinuxHelpers.podspec"
-  pod "KituraTemplateEngine", :podspec => "./Kitura/KituraTemplateEngine.podspec"
-  pod "KituraTypeDecoder", :podspec => "./Kitura/KituraTypeDecoder.podspec"
+  pod "Kitura"#, :podspec => "./Kitura/Kitura.podspec"
+#  pod "KituraContracts", :podspec => "./Kitura/KituraContracts.podspec"
+#  pod "KituraLoggerAPI", :podspec => "./Kitura/KituraLoggerAPI.podspec"
+#  pod "KituraNIO", :podspec => "./Kitura/KituraNIO.podspec"
+#  pod "KituraNIOLinuxHelpers", :podspec => "./Kitura/KituraNIOLinuxHelpers.podspec"
+#  pod "KituraTemplateEngine", :podspec => "./Kitura/KituraTemplateEngine.podspec"
+#  pod "KituraTypeDecoder", :podspec => "./Kitura/KituraTypeDecoder.podspec"
+#
+#  pod "BlueSocket", :podspec => "./Kitura/BlueSocket.podspec"
+#  pod "BlueSSLService", :podspec => "./Kitura/BlueSSLService.podspec"
+#
+#  pod "HeliumLogger", :podspec => "./Kitura/HeliumLogger.podspec"
+#
+  pod 'GCDWebServer'
+#  //git@github.com:VaslD/Podspecs.git
 
-  pod "BlueSocket", :podspec => "./Kitura/BlueSocket.podspec"
-  pod "BlueSSLService", :podspec => "./Kitura/BlueSSLService.podspec"
-
-  pod "HeliumLogger", :podspec => "./Kitura/HeliumLogger.podspec"
+#pod "Vapor"
+pod "Vapor", :testsec => ["VaporTests"]
+  
 end
 
 post_install do |installer|

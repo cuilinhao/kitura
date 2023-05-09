@@ -1,0 +1,6 @@
+framework module CoreMetrics {
+  umbrella header "CoreMetrics-umbrella.h"
+
+  export *
+  module * { export * }
+}

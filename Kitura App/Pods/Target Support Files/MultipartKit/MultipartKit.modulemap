@@ -1,0 +1,6 @@
+framework module MultipartKit {
+  umbrella header "MultipartKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

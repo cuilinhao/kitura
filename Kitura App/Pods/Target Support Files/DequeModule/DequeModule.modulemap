@@ -1,0 +1,6 @@
+framework module DequeModule {
+  umbrella header "DequeModule-umbrella.h"
+
+  export *
+  module * { export * }
+}

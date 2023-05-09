@@ -1,0 +1,6 @@
+framework module NIOExtras {
+  umbrella header "NIOExtras-umbrella.h"
+
+  export *
+  module * { export * }
+}

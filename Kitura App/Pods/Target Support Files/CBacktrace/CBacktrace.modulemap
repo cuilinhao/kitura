@@ -1,0 +1,6 @@
+framework module CBacktrace {
+  umbrella header "CBacktrace-umbrella.h"
+
+  export *
+  module * { export * }
+}

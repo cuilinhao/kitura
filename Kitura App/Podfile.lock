@@ -1,243 +1,346 @@
 PODS:
-  - _NIODataStructures (2.40.0)
+  - _AtomicsShims (1.0.3)
+  - _NIODataStructures (2.46.0)
+  - _NumericsShims (1.0.2)
+  - Algorithms (1.0.0):
+    - RealModule (~> 1.0)
+  - AsyncHTTPClient (1.13.1):
+    - Atomics (~> 1.0)
+    - CAsyncHTTPClient (= 1.13.1)
+    - Logging (~> 1.4)
+    - NIO (~> 2.42)
+    - NIOConcurrencyHelpers (~> 2.42)
+    - NIOCore (~> 2.42)
+    - NIOHTTP1 (~> 2.42)
+    - NIOHTTP2 (~> 1.19)
+    - NIOHTTPCompression (~> 1.13)
+    - NIOPOSIX (~> 2.42)
+    - NIOSOCKS (~> 1.13)
+    - NIOSSL (~> 2.22)
+    - NIOTransportServices (~> 1.11)
+  - AsyncKit (1.15.0):
+    - Logging (~> 1.0)
+    - NIO (~> 2.33)
+  - Atomics (1.0.3):
+    - _AtomicsShims (= 1.0.3)
+  - Backtrace (1.3.3):
+    - CBacktrace (= 1.3.3)
   - BlueSocket (2.0.4)
   - BlueSSLService (2.0.2):
     - BlueSocket (~> 2.0)
-  - CNIOAtomics (2.40.0)
-  - CNIOBoringSSL (2.19.0)
-  - CNIOBoringSSLShims (2.19.0):
-    - CNIOBoringSSL (= 2.19.0)
-  - CNIODarwin (2.40.0)
-  - CNIOHTTPParser (2.40.0)
-  - CNIOLinux (2.40.0)
-  - CNIOSHA1 (2.40.0)
-  - CNIOWindows (2.40.0)
-  - HeliumLogger (2.0.0):
-    - KituraLoggerAPI (~> 2.0)
+  - CAsyncHTTPClient (1.13.1)
+  - CBacktrace (1.3.3)
+  - CKituraLinuxHelpers (3.1.1)
+  - CNIOAtomics (2.46.0)
+  - CNIOBoringSSL (2.23.0)
+  - CNIOBoringSSLShims (2.23.0):
+    - CNIOBoringSSL (= 2.23.0)
+  - CNIODarwin (2.46.0)
+  - CNIOExtrasZlib (1.15.0)
+  - CNIOLinux (2.46.0)
+  - CNIOLLHTTP (2.46.0)
+  - CNIOSHA1 (2.46.0)
+  - CNIOWindows (2.46.0)
+  - Collections (1.0.4):
+    - DequeModule (= 1.0.4)
+    - OrderedCollections (= 1.0.4)
+  - ConsoleKit (4.5.0):
+    - Logging (~> 1.0)
+  - CoreMetrics (2.3.3)
+  - Crypto (2.2.2)
+  - CVaporBcrypt (4.67.5)
+  - CVaporURLParser (4.67.5)
+  - DequeModule (1.0.4)
+  - GCDWebServer (3.5.4):
+    - GCDWebServer/Core (= 3.5.4)
+  - GCDWebServer/Core (3.5.4)
   - Kitura (3.0.1):
     - KituraContracts (~> 2.0)
     - KituraLoggerAPI (~> 2.0)
-    - KituraNIO (~> 3.0)
+    - KituraNIO (~> 3.1)
     - KituraTemplateEngine (~> 3.0)
     - KituraTypeDecoder (~> 2.0)
+    - Logging (< 2.0.0)
   - KituraContracts (2.0.1):
-    - LoggerAPI (~> 2.0)
+    - KituraLoggerAPI (~> 2.0)
   - KituraLoggerAPI (2.0.0):
     - Logging (~> 1.0)
-  - KituraNIO (3.1.0):
+  - KituraNIO (3.1.1):
     - BlueSSLService (~> 2.0)
+    - CKituraLinuxHelpers (= 3.1.1)
     - KituraLoggerAPI (~> 2.0)
-    - KituraNIOLinuxHelpers (= 3.1.0)
-    - SwiftNIO (~> 2.33)
-    - SwiftNIOConcurrencyHelpers (~> 2.33)
-    - SwiftNIOExtras (~> 1.0)
-    - SwiftNIOFoundationCompat (~> 2.33)
-    - SwiftNIOHTTP1 (~> 2.33)
-    - SwiftNIOSSL (~> 2.0)
-    - SwiftNIOWebSocket (~> 2.33)
-  - KituraNIOLinuxHelpers (3.1.0)
+    - NIO (~> 2.33)
+    - NIOConcurrencyHelpers (~> 2.33)
+    - NIOExtras (~> 1.0)
+    - NIOFoundationCompat (~> 2.33)
+    - NIOHTTP1 (~> 2.33)
+    - NIOSSL (~> 2.0)
+    - NIOWebSocket (~> 2.33)
   - KituraTemplateEngine (3.0.0)
   - KituraTypeDecoder (2.0.0)
-  - LoggerAPI (2.0.0):
-    - Logging (~> 1.1)
-  - Logging (1.4.0)
-  - SwiftNIO (2.40.0):
-    - _NIODataStructures (= 2.40.0)
-    - CNIOAtomics (= 2.40.0)
-    - CNIODarwin (= 2.40.0)
-    - CNIOLinux (= 2.40.0)
-    - CNIOWindows (= 2.40.0)
-    - SwiftNIOConcurrencyHelpers (= 2.40.0)
-    - SwiftNIOCore (= 2.40.0)
-    - SwiftNIOEmbedded (= 2.40.0)
-    - SwiftNIOPosix (= 2.40.0)
-  - SwiftNIOConcurrencyHelpers (2.40.0):
-    - CNIOAtomics (= 2.40.0)
-  - SwiftNIOCore (2.40.0):
-    - CNIOAtomics (= 2.40.0)
-    - CNIOLinux (= 2.40.0)
-    - SwiftNIOConcurrencyHelpers (= 2.40.0)
-  - SwiftNIOEmbedded (2.40.0):
-    - _NIODataStructures (= 2.40.0)
-    - CNIOAtomics (= 2.40.0)
-    - CNIOLinux (= 2.40.0)
-    - SwiftNIOConcurrencyHelpers (= 2.40.0)
-    - SwiftNIOCore (= 2.40.0)
-  - SwiftNIOExtras (1.11.0):
-    - _NIODataStructures (< 3, >= 2.32.0)
-    - CNIOAtomics (< 3, >= 2.32.0)
-    - CNIODarwin (< 3, >= 2.32.0)
-    - CNIOLinux (< 3, >= 2.32.0)
-    - CNIOWindows (< 3, >= 2.32.0)
-    - SwiftNIO (< 3, >= 2.32.0)
-    - SwiftNIOConcurrencyHelpers (< 3, >= 2.32.0)
-    - SwiftNIOCore (< 3, >= 2.32.0)
-    - SwiftNIOEmbedded (< 3, >= 2.32.0)
-    - SwiftNIOPosix (< 3, >= 2.32.0)
-  - SwiftNIOFoundationCompat (2.40.0):
-    - _NIODataStructures (= 2.40.0)
-    - CNIOAtomics (= 2.40.0)
-    - CNIODarwin (= 2.40.0)
-    - CNIOLinux (= 2.40.0)
-    - CNIOWindows (= 2.40.0)
-    - SwiftNIO (= 2.40.0)
-    - SwiftNIOConcurrencyHelpers (= 2.40.0)
-    - SwiftNIOCore (= 2.40.0)
-    - SwiftNIOEmbedded (= 2.40.0)
-    - SwiftNIOPosix (= 2.40.0)
-  - SwiftNIOHTTP1 (2.40.0):
-    - _NIODataStructures (= 2.40.0)
-    - CNIOAtomics (= 2.40.0)
-    - CNIODarwin (= 2.40.0)
-    - CNIOHTTPParser (= 2.40.0)
-    - CNIOLinux (= 2.40.0)
-    - CNIOWindows (= 2.40.0)
-    - SwiftNIO (= 2.40.0)
-    - SwiftNIOConcurrencyHelpers (= 2.40.0)
-    - SwiftNIOCore (= 2.40.0)
-    - SwiftNIOEmbedded (= 2.40.0)
-    - SwiftNIOPosix (= 2.40.0)
-  - SwiftNIOPosix (2.40.0):
-    - _NIODataStructures (= 2.40.0)
-    - CNIOAtomics (= 2.40.0)
-    - CNIODarwin (= 2.40.0)
-    - CNIOLinux (= 2.40.0)
-    - CNIOWindows (= 2.40.0)
-    - SwiftNIOConcurrencyHelpers (= 2.40.0)
-    - SwiftNIOCore (= 2.40.0)
-  - SwiftNIOSSL (2.19.0):
-    - _NIODataStructures (< 3, >= 2.32.0)
-    - CNIOAtomics (< 3, >= 2.32.0)
-    - CNIOBoringSSL (= 2.19.0)
-    - CNIOBoringSSLShims (= 2.19.0)
-    - CNIODarwin (< 3, >= 2.32.0)
-    - CNIOLinux (< 3, >= 2.32.0)
-    - CNIOWindows (< 3, >= 2.32.0)
-    - SwiftNIO (< 3, >= 2.32.0)
-    - SwiftNIOConcurrencyHelpers (< 3, >= 2.32.0)
-    - SwiftNIOCore (< 3, >= 2.32.0)
-    - SwiftNIOEmbedded (< 3, >= 2.32.0)
-    - SwiftNIOPosix (< 3, >= 2.32.0)
-    - SwiftNIOTLS (< 3, >= 2.32.0)
-  - SwiftNIOTLS (2.40.0):
-    - _NIODataStructures (= 2.40.0)
-    - CNIOAtomics (= 2.40.0)
-    - CNIODarwin (= 2.40.0)
-    - CNIOLinux (= 2.40.0)
-    - CNIOWindows (= 2.40.0)
-    - SwiftNIO (= 2.40.0)
-    - SwiftNIOConcurrencyHelpers (= 2.40.0)
-    - SwiftNIOCore (= 2.40.0)
-    - SwiftNIOEmbedded (= 2.40.0)
-    - SwiftNIOPosix (= 2.40.0)
-  - SwiftNIOWebSocket (2.40.0):
-    - _NIODataStructures (= 2.40.0)
-    - CNIOAtomics (= 2.40.0)
-    - CNIODarwin (= 2.40.0)
-    - CNIOHTTPParser (= 2.40.0)
-    - CNIOLinux (= 2.40.0)
-    - CNIOSHA1 (= 2.40.0)
-    - CNIOWindows (= 2.40.0)
-    - SwiftNIO (= 2.40.0)
-    - SwiftNIOConcurrencyHelpers (= 2.40.0)
-    - SwiftNIOCore (= 2.40.0)
-    - SwiftNIOEmbedded (= 2.40.0)
-    - SwiftNIOHTTP1 (= 2.40.0)
-    - SwiftNIOPosix (= 2.40.0)
+  - Logging (1.4.4)
+  - Metrics (2.3.3):
+    - CoreMetrics (= 2.3.3)
+  - MultipartKit (4.5.2):
+    - Collections (~> 1.0)
+    - NIO (~> 2.33)
+    - NIOHTTP1 (~> 2.33)
+  - NIO (2.46.0):
+    - NIOCore (= 2.46.0)
+    - NIOEmbedded (= 2.46.0)
+    - NIOPOSIX (= 2.46.0)
+  - NIOConcurrencyHelpers (2.46.0):
+    - CNIOAtomics (= 2.46.0)
+  - NIOCore (2.46.0):
+    - Atomics (~> 1.0)
+    - CNIOLinux (= 2.46.0)
+    - CNIOWindows (= 2.46.0)
+    - Collections (~> 1.0)
+    - NIOConcurrencyHelpers (= 2.46.0)
+  - NIOEmbedded (2.46.0):
+    - _NIODataStructures (= 2.46.0)
+    - Atomics (~> 1.0)
+    - Collections (~> 1.0)
+    - NIOConcurrencyHelpers (= 2.46.0)
+    - NIOCore (= 2.46.0)
+  - NIOExtras (1.15.0):
+    - NIO (~> 2.42)
+    - NIOCore (~> 2.42)
+  - NIOFoundationCompat (2.46.0):
+    - _NIODataStructures (= 2.46.0)
+    - Atomics (~> 1.0)
+    - CNIODarwin (= 2.46.0)
+    - CNIOLinux (= 2.46.0)
+    - CNIOWindows (= 2.46.0)
+    - NIOConcurrencyHelpers (= 2.46.0)
+    - NIOCore (= 2.46.0)
+  - NIOHPACK (1.23.1):
+    - NIO (~> 2.35)
+    - NIOConcurrencyHelpers (~> 2.35)
+    - NIOCore (~> 2.35)
+    - NIOHTTP1 (~> 2.35)
+  - NIOHTTP1 (2.46.0):
+    - CNIOLLHTTP (= 2.46.0)
+    - NIO (= 2.46.0)
+    - NIOConcurrencyHelpers (= 2.46.0)
+    - NIOCore (= 2.46.0)
+  - NIOHTTP2 (1.23.1):
+    - Atomics (~> 1.0)
+    - NIO (~> 2.35)
+    - NIOConcurrencyHelpers (~> 2.35)
+    - NIOCore (~> 2.35)
+    - NIOHPACK (= 1.23.1)
+    - NIOHTTP1 (~> 2.35)
+    - NIOTLS (~> 2.35)
+  - NIOHTTPCompression (1.15.0):
+    - CNIOExtrasZlib (= 1.15.0)
+    - NIO (~> 2.42)
+    - NIOCore (~> 2.42)
+    - NIOHTTP1 (~> 2.42)
+  - NIOPOSIX (2.46.0):
+    - _NIODataStructures (= 2.46.0)
+    - Atomics (~> 1.0)
+    - CNIODarwin (= 2.46.0)
+    - CNIOLinux (= 2.46.0)
+    - CNIOWindows (= 2.46.0)
+    - NIOConcurrencyHelpers (= 2.46.0)
+    - NIOCore (= 2.46.0)
+  - NIOSOCKS (1.15.0):
+    - NIO (~> 2.42)
+    - NIOCore (~> 2.42)
+  - NIOSSL (2.23.0):
+    - CNIOBoringSSL (= 2.23.0)
+    - CNIOBoringSSLShims (= 2.23.0)
+    - NIO (~> 2.42)
+    - NIOConcurrencyHelpers (~> 2.42)
+    - NIOCore (~> 2.42)
+    - NIOTLS (~> 2.42)
+  - NIOTLS (2.46.0):
+    - NIO (= 2.46.0)
+    - NIOCore (= 2.46.0)
+  - NIOTransportServices (1.15.0):
+    - Atomics (~> 1.0)
+    - NIO (~> 2.42)
+    - NIOCore (~> 2.42)
+    - NIOFoundationCompat (~> 2.42)
+    - NIOTLS (~> 2.42)
+  - NIOWebSocket (2.46.0):
+    - CNIOSHA1 (= 2.46.0)
+    - NIO (= 2.46.0)
+    - NIOCore (= 2.46.0)
+    - NIOHTTP1 (= 2.46.0)
+  - OrderedCollections (1.0.4)
+  - RealModule (1.0.2):
+    - _NumericsShims (= 1.0.2)
+  - RoutingKit (4.6.0):
+    - Logging (~> 1.4)
+  - Vapor (4.67.5):
+    - Algorithms (~> 1.0)
+    - AsyncHTTPClient (~> 1.10)
+    - AsyncKit (~> 1.0)
+    - Backtrace (~> 1.3.3)
+    - ConsoleKit (~> 4.0)
+    - Crypto (< 3.0.0, >= 1.0.0)
+    - CVaporBcrypt (= 4.67.5)
+    - CVaporURLParser (= 4.67.5)
+    - Logging (~> 1.0)
+    - Metrics (~> 2.0)
+    - MultipartKit (~> 4.2)
+    - NIO (~> 2.42)
+    - NIOConcurrencyHelpers (~> 2.42)
+    - NIOCore (~> 2.42)
+    - NIOExtras (~> 1.0)
+    - NIOFoundationCompat (~> 2.42)
+    - NIOHTTP1 (~> 2.42)
+    - NIOHTTP2 (~> 1.20)
+    - NIOHTTPCompression (~> 1.0)
+    - NIOSSL (~> 2.8)
+    - NIOWebSocket (~> 2.42)
+    - RoutingKit (~> 4.5)
+    - WebSocketKit (~> 2.0)
+  - WebSocketKit (2.6.1):
+    - Atomics (~> 1.0)
+    - NIO (~> 2.33)
+    - NIOConcurrencyHelpers (~> 2.33)
+    - NIOCore (~> 2.33)
+    - NIOFoundationCompat (~> 2.33)
+    - NIOHTTP1 (~> 2.33)
+    - NIOSSL (~> 2.14)
+    - NIOTransportServices (~> 1.11)
+    - NIOWebSocket (~> 2.33)
 
 DEPENDENCIES:
-  - BlueSocket (from `./Kitura/BlueSocket.podspec`)
-  - BlueSSLService (from `./Kitura/BlueSSLService.podspec`)
-  - HeliumLogger (from `./Kitura/HeliumLogger.podspec`)
-  - Kitura (from `./Kitura/Kitura.podspec`)
-  - KituraContracts (from `./Kitura/KituraContracts.podspec`)
-  - KituraLoggerAPI (from `./Kitura/KituraLoggerAPI.podspec`)
-  - KituraNIO (from `./Kitura/KituraNIO.podspec`)
-  - KituraNIOLinuxHelpers (from `./Kitura/KituraNIOLinuxHelpers.podspec`)
-  - KituraTemplateEngine (from `./Kitura/KituraTemplateEngine.podspec`)
-  - KituraTypeDecoder (from `./Kitura/KituraTypeDecoder.podspec`)
+  - GCDWebServer
+  - Kitura
+  - Vapor
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cuilinhao/vapor_podspec.git:
+    - _AtomicsShims
+    - _NumericsShims
+    - Algorithms
+    - AsyncHTTPClient
+    - AsyncKit
+    - Atomics
+    - Backtrace
+    - CAsyncHTTPClient
+    - CBacktrace
+    - CNIOExtrasZlib
+    - Collections
+    - ConsoleKit
+    - CoreMetrics
+    - Crypto
+    - CVaporBcrypt
+    - CVaporURLParser
+    - DequeModule
+    - Metrics
+    - MultipartKit
+    - NIOHPACK
+    - NIOHTTP2
+    - NIOHTTPCompression
+    - NIOSOCKS
+    - NIOTransportServices
+    - OrderedCollections
+    - RealModule
+    - RoutingKit
+    - Vapor
+    - WebSocketKit
+  https://github.com/VaslD/Podspecs.git:
     - _NIODataStructures
+    - BlueSocket
+    - BlueSSLService
+    - CKituraLinuxHelpers
     - CNIOAtomics
     - CNIOBoringSSL
     - CNIOBoringSSLShims
     - CNIODarwin
-    - CNIOHTTPParser
     - CNIOLinux
+    - CNIOLLHTTP
     - CNIOSHA1
     - CNIOWindows
-    - LoggerAPI
+    - Kitura
+    - KituraContracts
+    - KituraLoggerAPI
+    - KituraNIO
+    - KituraTemplateEngine
+    - KituraTypeDecoder
     - Logging
-    - SwiftNIO
-    - SwiftNIOConcurrencyHelpers
-    - SwiftNIOCore
-    - SwiftNIOEmbedded
-    - SwiftNIOExtras
-    - SwiftNIOFoundationCompat
-    - SwiftNIOHTTP1
-    - SwiftNIOPosix
-    - SwiftNIOSSL
-    - SwiftNIOTLS
-    - SwiftNIOWebSocket
-
-EXTERNAL SOURCES:
-  BlueSocket:
-    :podspec: "./Kitura/BlueSocket.podspec"
-  BlueSSLService:
-    :podspec: "./Kitura/BlueSSLService.podspec"
-  HeliumLogger:
-    :podspec: "./Kitura/HeliumLogger.podspec"
-  Kitura:
-    :podspec: "./Kitura/Kitura.podspec"
-  KituraContracts:
-    :podspec: "./Kitura/KituraContracts.podspec"
-  KituraLoggerAPI:
-    :podspec: "./Kitura/KituraLoggerAPI.podspec"
-  KituraNIO:
-    :podspec: "./Kitura/KituraNIO.podspec"
-  KituraNIOLinuxHelpers:
-    :podspec: "./Kitura/KituraNIOLinuxHelpers.podspec"
-  KituraTemplateEngine:
-    :podspec: "./Kitura/KituraTemplateEngine.podspec"
-  KituraTypeDecoder:
-    :podspec: "./Kitura/KituraTypeDecoder.podspec"
+    - NIO
+    - NIOConcurrencyHelpers
+    - NIOCore
+    - NIOEmbedded
+    - NIOExtras
+    - NIOFoundationCompat
+    - NIOHTTP1
+    - NIOPOSIX
+    - NIOSSL
+    - NIOTLS
+    - NIOWebSocket
+  trunk:
+    - GCDWebServer
 
 SPEC CHECKSUMS:
-  _NIODataStructures: 3d45d8e70a1d17a15b1dc59d102c63dbc0525ffd
-  BlueSocket: 7e923445aa2b2b6eba440d8a4c88de7acdf1bf75
-  BlueSSLService: ff634b54e50410d0cd38da09c3a6dee10384b7d8
-  CNIOAtomics: 8edf08644e5e6fa0f021c239be9e8beb1cd9ef18
-  CNIOBoringSSL: 2c9c96c2e95f15e83fb8d26b9738d939cc39ae33
-  CNIOBoringSSLShims: c5c9346e7bbd1040f4f8793a35441dda7487539a
-  CNIODarwin: 93850990d29f2626b05306c6c9309f9be0d74c2f
-  CNIOHTTPParser: 8ce395236fa1d09ac3b4f4bcfba79b849b2ac684
-  CNIOLinux: 62e3505f50de558c393dc2f273dde71dcce518da
-  CNIOSHA1: 6df39ae8db5922d6fcdd94e15bc57118cbd6b104
-  CNIOWindows: 3047f2d8165848a3936a0a755fee27c6b5ee479b
-  HeliumLogger: 732425c0116034174e501ab144f1196360570992
-  Kitura: 14008a28633a3664af28a128ae5153922cb39e58
-  KituraContracts: ff4fb1f168437bf908046cccd211019a75c1b00d
-  KituraLoggerAPI: 9ecb40c87b40315e558f1374af1d3a71e32fc805
-  KituraNIO: 99d748fe82a8de9f4073ee36969ef9d87d00d273
-  KituraNIOLinuxHelpers: 8056603314b690d3849aeb3e7aef52117ff8b4a1
-  KituraTemplateEngine: b3265e52346cb4712c543e58e4077112d1168c28
-  KituraTypeDecoder: 83622740498ee65c0128f215e6fe81b2896cc808
-  LoggerAPI: 1dc79b15e8a9bca910570936d7ada8dc66d3d709
-  Logging: beeb016c9c80cf77042d62e83495816847ef108b
-  SwiftNIO: 829958aab300642625091f82fc2f49cb7cf4ef24
-  SwiftNIOConcurrencyHelpers: 697370136789b1074e4535eaae75cbd7f900370e
-  SwiftNIOCore: 473fdfe746534d7aa25766916459eeaf6f92ef49
-  SwiftNIOEmbedded: ffcb5147db67d9686c8366b7f8427b36132f2c8a
-  SwiftNIOExtras: 481f74d6bf0b0ef699905ed66439cb019c4975c9
-  SwiftNIOFoundationCompat: b9cdbea4806e4a12e9f66d9696fa3b98c4c3232b
-  SwiftNIOHTTP1: ef56706550a1dc135ea69d65215b9941e643c23b
-  SwiftNIOPosix: b49af4bdbecaadfadd5c93dfe28594d6722b75e4
-  SwiftNIOSSL: d153c5a6fc5b2301b0519b4c4d037a9414212da6
-  SwiftNIOTLS: 598af547490133e9aac52aed0c23c4a90c31dcfc
-  SwiftNIOWebSocket: cb67e4bf1b9f6895d2103b15d8369f8504ea42da
+  _AtomicsShims: b956a77543be10c010a878f1b194b617eb7e6545
+  _NIODataStructures: d5831dd7e59ddb7888e590072436be2af83f9b1f
+  _NumericsShims: 480d25ea56c6ccebdf24fa556223534a4a7ce668
+  Algorithms: b5761819548cd97e23a26c0bfbe675e0d65e1098
+  AsyncHTTPClient: c2d2ae60a79fcf0cc1b401db6a1b81efe20f7cef
+  AsyncKit: e6aa2b993c11237403a6c9c02db1763450988bcf
+  Atomics: 0f05359548992192bbda5bf091ead80ff7550a64
+  Backtrace: fe11c7fb3e12f0b38c8d2e211876d93974a9bd18
+  BlueSocket: d0ad7c9db54d0b54e68ebb191be7aeadb0ac93e3
+  BlueSSLService: 770ac666ad1e5388429a2278344f8d89a221961b
+  CAsyncHTTPClient: d702bde6c0b2979c9d56788b84855ebe41b7b308
+  CBacktrace: 82f2a0b8fb1ab248282a36f99ecd69ed1a87a285
+  CKituraLinuxHelpers: 27d19f967a897f258ffd217a58463c447aaa8fe4
+  CNIOAtomics: 3ca3daff745da2299d83bdad00ec422afafeee8b
+  CNIOBoringSSL: 6c1015eeb234e090f4d09513d971c1bee2edf914
+  CNIOBoringSSLShims: 88b0e0eaf7bdadebf0403c3ae567ae23413c4b93
+  CNIODarwin: f1a753aa6d32d4cb5365d5826c4b0778246020d9
+  CNIOExtrasZlib: 34b314212ca05266f468105ec716d2ecbb4d0bde
+  CNIOLinux: 2a03092c23e48d442d34ca931e0526a51ae39ad6
+  CNIOLLHTTP: 46fe43c8df724da2679ed5247b5d9b24a10c67d2
+  CNIOSHA1: 74750814fa37f4710c105d23fb006a6674cce424
+  CNIOWindows: 9d88afbfae61157867f2b7f8e6da14bf44560b6d
+  Collections: 81bf93f66f769773f513a8cf9a14a7894f180fe7
+  ConsoleKit: a3f18f875c5b7db0185ab339827a1ab3bf48e264
+  CoreMetrics: 1a100d17dbd74947252ec877b7a72c5a9f63952d
+  Crypto: 5c1bb3d7106e96ad4fed6bcd55548cf83e7b69e8
+  CVaporBcrypt: 7c7c98e833c5d274670dd84e004f4d02b411fdfe
+  CVaporURLParser: fd0ba8ee457628d9b78ea9ec8130c52e1bbb767d
+  DequeModule: d2ad334c8489f2f38f40d46e946890b4f1564ced
+  GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
+  Kitura: 08532fbdc837b9eacef2078d481f917ae57a4945
+  KituraContracts: 816417a173f6b86184d2ec9d5c05587db09a334c
+  KituraLoggerAPI: c02b6c6ce7fbcfb72043a5c260ef89d625266fd9
+  KituraNIO: 337e31bd3fb551258bdeee47c51cbe4c36788699
+  KituraTemplateEngine: da2ac790b31fff4156e63a066473153612004126
+  KituraTypeDecoder: 05ac6c166c877dc2bb909eed20d2e978f3eb0e0b
+  Logging: 2f6435671d608f6583549742d9ea5bc28b89bc9a
+  Metrics: a1e34a3a6401e47d0686409bf463919ab9febf1a
+  MultipartKit: f99a4156777f5f7a9faca6d13df7c002d3f79522
+  NIO: c1e3a24de6886a1e74b8d4da80b9cdfd4005bc72
+  NIOConcurrencyHelpers: c53d1caa3c2b1d679d80eb2ff94d4c81ad532ac9
+  NIOCore: b77698a65a6907b9b56e9c8fb861356f22334a40
+  NIOEmbedded: 7ef36c2822b250fa3b0b218ec51bb4a200049282
+  NIOExtras: 4f0ae3d0bb02e1e446fb28874235d7489bbe97b4
+  NIOFoundationCompat: 93d9b3d9bba3363398f825760f2109dd39cd1b8e
+  NIOHPACK: d6b26f56765dbfecda486e7df85bfd914e506e0f
+  NIOHTTP1: 8afef838c83c5729c4ce9a4278b185680837fe88
+  NIOHTTP2: f54a93a3e9eb2f478b0c3c54d3a4605c0776ee6a
+  NIOHTTPCompression: 558437f33732bdc2ad9abc5211e5f2574b14f231
+  NIOPOSIX: 10f18f41eae826031e7466071b553d9fe4dd96bb
+  NIOSOCKS: 59ee082b5a6910ee9eddfae3b48f7d15729b14ab
+  NIOSSL: 34042ec48a5c3e6af1ff603bd7e15d18a844060e
+  NIOTLS: 82f0d7614ac87ba3e07b058e3bc8f461c6f774b7
+  NIOTransportServices: 479f0077f7d5e139c6b734e9569b3f50dede4722
+  NIOWebSocket: cecb845b022cc56a3cdbdbd4de348b26f81e3433
+  OrderedCollections: babf6bd1ded425554a4e13015943f6beedb2d808
+  RealModule: c10707af1a6a33d77c26bbe0c39f0480cd2d62e2
+  RoutingKit: 4b590006b06c7bce80ce530d378dd9e638178822
+  Vapor: 8ba4b97a6e1a5da6e1bd68f954aa491cb96621ff
+  WebSocketKit: 5d4a63f0e9e53331a2f744d4d43a8622a8c332c0
 
-PODFILE CHECKSUM: dc0cc01025cc0d99e3b7c4e185a056a90920fb4c
+PODFILE CHECKSUM: b1ecc86f6764d82fe1fd80b31016b1e1c7b10358
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.12.1

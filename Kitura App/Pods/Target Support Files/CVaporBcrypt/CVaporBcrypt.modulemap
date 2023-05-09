@@ -1,0 +1,6 @@
+framework module CVaporBcrypt {
+  umbrella header "CVaporBcrypt-umbrella.h"
+
+  export *
+  module * { export * }
+}

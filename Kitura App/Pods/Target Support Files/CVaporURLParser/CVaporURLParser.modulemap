@@ -1,0 +1,6 @@
+framework module CVaporURLParser {
+  umbrella header "CVaporURLParser-umbrella.h"
+
+  export *
+  module * { export * }
+}

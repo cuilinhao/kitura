@@ -101,3 +101,6 @@ extension PriorityQueue: CustomStringConvertible {
         return "PriorityQueue(count: \(self.count)): \(Array(self))"
     }
 }
+
+extension PriorityQueue: Sendable where Element: Sendable {}
+extension PriorityQueue.Iterator: Sendable where Element: Sendable {}

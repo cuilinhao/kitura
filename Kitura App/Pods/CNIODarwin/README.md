@@ -11,7 +11,7 @@ It's like [Netty](https://netty.io), but written for Swift.
 
 The SwiftNIO project is split across multiple repositories:
 
-Repository | NIO 2 (Swift 5.4+)
+Repository | NIO 2 (Swift 5.5.2+)
 --- | ---
 [https://github.com/apple/swift-nio][repo-nio] <br> SwiftNIO core | `from: "2.0.0"`
 [https://github.com/apple/swift-nio-ssl][repo-nio-ssl] <br> TLS (SSL) support | `from: "2.0.0"`
@@ -67,9 +67,17 @@ Redis | ✅ | ❌ | [mordil/swift-redi-stack](https://gitlab.com/Mordil/swift-re
 ### Supported Versions
 
 ### SwiftNIO 2
+
 This is the current version of SwiftNIO and will be supported for the foreseeable future.
 
-The latest released SwiftNIO 2 version supports Swift 5.4+. NIO 2.29.0 and older support Swift 5.0+, NIO 2.39.0 and older support Swift 5.2+.
+The most recent versions of SwiftNIO support Swift 5.5.2 and newer. The minimum Swift version supported by SwiftNIO releases are detailed below:
+
+SwiftNIO            | Minimum Swift Version
+--------------------|----------------------
+`2.0.0 ..< 2.30.0`  | 5.0
+`2.30.0 ..< 2.40.0` | 5.2
+`2.40.0 ..< 2.43.0` | 5.4
+`2.43.0 ...`        | 5.5.2
 
 ### SwiftNIO 1
 SwiftNIO 1 is considered end of life - it is strongly recommended that you move to a newer version.  The Core NIO team does not actively work on this version.  No new features will be added to this version but PRs which fix bugs or security vulnerabilities will be accepted until the end of May 2022.
@@ -202,7 +210,7 @@ The core SwiftNIO repository will contain a few extremely important protocol imp
 
 ## Documentation
 
- - [API documentation](https://apple.github.io/swift-nio/docs/current/NIO/index.html)
+ - [API documentation](https://apple.github.io/swift-nio/docs/current/NIOCore/index.html)
 
 ## Example Usage
 
@@ -243,7 +251,7 @@ dependencies: [
 
 and then adding the appropriate SwiftNIO module(s) to your target dependencies.
 The syntax for adding target dependencies differs slightly between Swift
-versions. For example, if you want to depend on the `NIOCore`, `NIOPosix` and 
+versions. For example, if you want to depend on the `NIOCore`, `NIOPosix` and
 `NIOHTTP1` modules, specify the following dependencies:
 
 #### Swift 5.4 and newer (`swift-tools-version:5.4`)
@@ -276,14 +284,8 @@ echo "Hello SwiftNIO" | nc localhost 9999
 
 If all goes well, you'll see the message echoed back to you.
 
-To work on SwiftNIO in Xcode 11+, you can just open the `Package.swift`
+To work on SwiftNIO in Xcode, you can just open the `Package.swift`
 file in Xcode and use Xcode's support for SwiftPM Packages.
-
-If you want to develop SwiftNIO with Xcode 10, you have to generate an Xcode project:
-
-```bash
-swift package generate-xcodeproj
-```
 
 ### An alternative: using `docker-compose`
 
@@ -305,9 +307,9 @@ First make sure you have [Docker](https://www.docker.com/community-edition) inst
   Will create a base image, compile SwiftNIO, and run a sample `NIOHTTP1Server` on
   `localhost:8888`. Test it by `curl http://localhost:8888`
 
-- `docker-compose -f docker/docker-compose.yaml -f docker/docker-compose.2004.54.yaml run test`
+- `docker-compose -f docker/docker-compose.yaml -f docker/docker-compose.2204.57.yaml run test`
 
-  Will create a base image using Ubuntu 20.04 and swift 5.4, compile SwiftNIO and run the unit and integration tests.  Files exist for other ubuntu and swift versions in the docker directory.
+  Will create a base image using Ubuntu 22.04 and Swift 5.7, compile SwiftNIO and run the unit and integration tests.  Files exist for other ubuntu and swift versions in the docker directory.
 
 
 ## Developing SwiftNIO
@@ -329,7 +331,7 @@ have a few prerequisites installed on your system.
 
 ### Linux
 
-- Swift 5.2, 5.3, or 5.4 from [swift.org/download](https://swift.org/download/#releases). We always recommend to use the latest released version.
+- Swift 5.5.2 or newer from [swift.org/download](https://swift.org/download/#releases). We always recommend to use the latest released version.
 - netcat (for integration tests only)
 - lsof (for integration tests only)
 - shasum (for integration tests only)
@@ -369,10 +371,3 @@ dnf install swift-lang /usr/bin/nc /usr/bin/lsof /usr/bin/shasum
 [repo-nio-ssl]: https://github.com/apple/swift-nio-ssl
 [repo-nio-transport-services]: https://github.com/apple/swift-nio-transport-services
 [repo-nio-ssh]: https://github.com/apple/swift-nio-ssh
-
-### Speeding up testing
-It's possible to run the test suite in parallel, it can save significant time if you have a larger multi-core machine, just add `--parallel` when running the tests. This can speed up the run time of the test suite by 30x or more.
-
-```
-swift test --parallel
-```

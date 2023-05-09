@@ -1,0 +1,6 @@
+framework module RoutingKit {
+  umbrella header "RoutingKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

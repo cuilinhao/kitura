@@ -1,0 +1,6 @@
+framework module NIOHTTP2 {
+  umbrella header "NIOHTTP2-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Algorithms {
+  umbrella header "Algorithms-umbrella.h"
+
+  export *
+  module * { export * }
+}

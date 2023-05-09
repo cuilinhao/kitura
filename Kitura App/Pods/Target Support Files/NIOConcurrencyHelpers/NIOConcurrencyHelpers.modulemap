@@ -1,0 +1,6 @@
+framework module NIOConcurrencyHelpers {
+  umbrella header "NIOConcurrencyHelpers-umbrella.h"
+
+  export *
+  module * { export * }
+}

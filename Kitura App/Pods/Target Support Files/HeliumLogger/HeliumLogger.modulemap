@@ -1,6 +1,0 @@
-framework module HeliumLogger {
-  umbrella header "HeliumLogger-umbrella.h"
-
-  export *
-  module * { export * }
-}

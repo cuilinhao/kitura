@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		2F1210A0295F1F8900A5C628 /* ServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F12109F295F1F8900A5C628 /* ServerViewController.swift */; };
 		2F1210A3295F2FAB00A5C628 /* Certificates.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 2F1210A2295F2FA800A5C628 /* Certificates.p12 */; };
+		630964292A08D05E00B42122 /* TestF_VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 630964282A08D05E00B42122 /* TestF_VC.swift */; };
+		6309642B2A08E05400B42122 /* TestDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6309642A2A08E05400B42122 /* TestDViewController.swift */; };
+		63BA56F529F92B5F00F1FBBA /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA56F429F92B5F00F1FBBA /* TestViewController.swift */; };
+		63BA56FB29F949C500F1FBBA /* TestBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA56FA29F949C500F1FBBA /* TestBViewController.swift */; };
+		63BA56FD29FA605800F1FBBA /* TestCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63BA56FC29FA605800F1FBBA /* TestCViewController.swift */; };
 		959E120E20F06F0F302718C7 /* Pods_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C92644FA53881DFE0596CA78 /* Pods_Example.framework */; };
 		E8336C5A2925318900AC3563 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8336C592925318900AC3563 /* NavigationController.swift */; };
 		E8366D1428C0B08C00C05A21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8366D1328C0B08C00C05A21 /* AppDelegate.swift */; };
@@ -33,6 +38,11 @@
 		2F12109F295F1F8900A5C628 /* ServerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerViewController.swift; sourceTree = "<group>"; };
 		2F1210A2295F2FA800A5C628 /* Certificates.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Certificates.p12; sourceTree = "<group>"; };
 		2FBB92D1293A0B6900F5C757 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		630964282A08D05E00B42122 /* TestF_VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestF_VC.swift; sourceTree = "<group>"; };
+		6309642A2A08E05400B42122 /* TestDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDViewController.swift; sourceTree = "<group>"; };
+		63BA56F429F92B5F00F1FBBA /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		63BA56FA29F949C500F1FBBA /* TestBViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestBViewController.swift; sourceTree = "<group>"; };
+		63BA56FC29FA605800F1FBBA /* TestCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCViewController.swift; sourceTree = "<group>"; };
 		923350E71A7A85C00EB57B80 /* Pods-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.release.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.release.xcconfig"; sourceTree = "<group>"; };
 		9445296B1B72A72B5916D9E0 /* Pods-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Example.debug.xcconfig"; path = "Target Support Files/Pods-Example/Pods-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C92644FA53881DFE0596CA78 /* Pods_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +125,11 @@
 				E8366D1328C0B08C00C05A21 /* AppDelegate.swift */,
 				E8336C592925318900AC3563 /* NavigationController.swift */,
 				2F12109F295F1F8900A5C628 /* ServerViewController.swift */,
+				63BA56F429F92B5F00F1FBBA /* TestViewController.swift */,
+				63BA56FA29F949C500F1FBBA /* TestBViewController.swift */,
+				63BA56FC29FA605800F1FBBA /* TestCViewController.swift */,
+				630964282A08D05E00B42122 /* TestF_VC.swift */,
+				6309642A2A08E05400B42122 /* TestDViewController.swift */,
 				E8336DA92925465E00AC3563 /* Resources */,
 				E8336DAA2925468000AC3563 /* Support */,
 			);
@@ -238,9 +253,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				63BA56FD29FA605800F1FBBA /* TestCViewController.swift in Sources */,
 				2F1210A0295F1F8900A5C628 /* ServerViewController.swift in Sources */,
+				63BA56FB29F949C500F1FBBA /* TestBViewController.swift in Sources */,
 				E8336C5A2925318900AC3563 /* NavigationController.swift in Sources */,
+				630964292A08D05E00B42122 /* TestF_VC.swift in Sources */,
+				63BA56F529F92B5F00F1FBBA /* TestViewController.swift in Sources */,
 				E8366D1428C0B08C00C05A21 /* AppDelegate.swift in Sources */,
+				6309642B2A08E05400B42122 /* TestDViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,6 +409,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = L8MRL9B64V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Support/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Scanning nearby devices uses Local Network.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -408,7 +429,6 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -428,6 +448,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = L8MRL9B64V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Example/Support/Info.plist;
+				INFOPLIST_KEY_LSSupportsOpeningDocumentsInPlace = YES;
 				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "Scanning nearby devices uses Local Network.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
@@ -447,7 +468,6 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

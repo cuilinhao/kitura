@@ -1,0 +1,6 @@
+framework module NIOFoundationCompat {
+  umbrella header "NIOFoundationCompat-umbrella.h"
+
+  export *
+  module * { export * }
+}

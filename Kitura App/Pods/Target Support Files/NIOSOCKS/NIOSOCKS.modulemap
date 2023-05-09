@@ -1,0 +1,6 @@
+framework module NIOSOCKS {
+  umbrella header "NIOSOCKS-umbrella.h"
+
+  export *
+  module * { export * }
+}

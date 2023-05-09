@@ -1,5 +1,5 @@
 import Foundation
-import HeliumLogger
+//import HeliumLogger
 import UIKit
 
 @main
@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.makeKeyAndVisible()
         self.window = window
 
-        HeliumLogger.use(.debug)
+//        HeliumLogger.use(.debug)
         return true
     }
 }

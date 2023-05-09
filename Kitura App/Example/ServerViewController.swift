@@ -13,10 +13,23 @@ class ServerViewController: UIViewController {
         self.view.backgroundColor = .systemBackground
     }
 
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // http://www.m3u8
-        
+//        self.test()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        //let vc = TestViewController()
+//        let vc = TestBViewController()
+        //let vc = TestCViewController()
+        //let vc = TestF_VC()
+        let vc = TestDViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func test() {
         // 网站访问： http://localhost:8080/
         DispatchQueue.global(qos: .background).async {
             let router = Router()

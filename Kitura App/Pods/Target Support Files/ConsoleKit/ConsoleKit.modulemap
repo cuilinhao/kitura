@@ -1,0 +1,6 @@
+framework module ConsoleKit {
+  umbrella header "ConsoleKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

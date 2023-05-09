@@ -1,0 +1,6 @@
+framework module AsyncHTTPClient {
+  umbrella header "AsyncHTTPClient-umbrella.h"
+
+  export *
+  module * { export * }
+}

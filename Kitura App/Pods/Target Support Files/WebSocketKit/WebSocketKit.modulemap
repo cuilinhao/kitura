@@ -1,0 +1,6 @@
+framework module WebSocketKit {
+  umbrella header "WebSocketKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module NIOCore {
+  umbrella header "NIOCore-umbrella.h"
+
+  export *
+  module * { export * }
+}
